@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Lato:ital,wght@0,300;1,400&family=Titillium+Web:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+
+}
+
+
+/* header */
+body{
+
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url(gradient-red-orange-4k-fh-1920x1080.jpg);
+    
+}
+
+.inicio{
+  width: 100%;
+}
+
+header {
+  padding: 15px 0;
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+}
+
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+img {
+
+  width: 50px;
+  margin-left: 10%;
+  align-items: flex-start;
+
+}
+
+
+.titulo {
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.titulo img {
+
+  margin-right: 1rem;
+}
+
+.navegacao {
+  width: 350px;
+  color: white;
+}
+
+.navegacao ul  {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navegacao a{
+  color: white;
+  text-decoration: none;
+}
+
+.navegacao ul li{
+  font-size: 17px;
+ 
+  cursor: pointer;
+}
+
+
+/* foooter */
+
+  
