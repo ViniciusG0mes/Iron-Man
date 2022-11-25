@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>IronMan</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+
+            <div class="titulo">
+
+                <img src="..//assets/imgs/triathlon.png" alt="">
+                <h1>IRONMAN</h1>
+            </div>
+
+            <div class="navegacao">
+                <ul>
+                    <li><a href="index.html">INICIAL</a></li>
+                    <li>|</li>
+                    <li><a href="#news">MANCHETES</a></li>
+                    <li>|</li>
+                    <li><a href="sobreProva.html">SOBRE A PROVA</a></li>
+                    <li>|</li>
+                    <li class="login.html"><a href="login.html">LOGIN</a></li>
+                    <li>|</li>
+                    <li><a href="cadastro.html">INSCREVA-SE</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+
+        <div class="boxFormulario">
+
+
+
+            <p>Bem-Vindo</p>
+
+            <span class="tipo_campo">E-mail:<br></span>
+            <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+
+            <span class="tipo_campo">Senha:<br></span>
+            <input id="senha_input" type="password" placeholder="******">
+
+
+            <button class="btn" onclick="entrar()">Entrar</button>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+    
+
+    <footer id="nossosContatos">
+        <div class="container1">
+            <div class="left box">
+                <h2>Redes Sociais</h2>
+                <div class="content">
+                    <div class="redesocial1">
+                        <span class="redesocial1"></span>
+                        <a href="https://www.instagram.com/brasilironman/">
+                            <img src="..//assets/imgs/instagram (1).png" alt=""></a>
+                            <a href="https://pt-br.facebook.com/IRONMANtri/">
+                            <img src="..//assets/imgs/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/brasilironman/">
+                            <img src="..//assets/imgs/twitter.png" alt=""></a>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="right box">
+                <h2>Contatos</h2>
+                <div class="content">
+                    <div class="email">
+                        <span class="email"></span>
+                        <span class="text">ironman@outlook.com</span>
+                    </div>
+                    <div class="telefone">
+                        <span class="telefone"></span>
+                        <span class="text">+55 11 99999-9999</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <section class="direitos-autorais">
+
+
+            <p>IRONMAN 2022. <br>
+                Todos os direitos reservados &copy;.
+            </p>
+
+            <p>Confira a nossa <strong>Política de Privacidade</strong></p>
+
+        </section>
+
+    </footer>
+
+
+    
+</body>
+
+</html>
+<script>
+function entrar() {
+    
+
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+
+    if (emailVar == "" || senhaVar == "") {
+       
+        console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+        return false;
+    }
+ 
+
+ 
+else{
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.ID_USUARIO = json.id;
+
+                setTimeout(function () {
+                    window.location = "./voto.html";
+                }, 1000); // apenas para exibir o loading
+
+            });
+
+        } else {
+
+            console.log("Houve um erro ao tentar realizar o login!");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+              
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+}
+
+
+}
+</script>
