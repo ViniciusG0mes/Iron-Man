@@ -46,7 +46,6 @@
 
             <p>Bem-Vindo</p>
 
-
             <span class="tipo_campo">Nome:<br></span>
             <input id="nome_input" type="text" placeholder="Insira seu nome">
 
@@ -60,7 +59,29 @@
             <input id="senha_input" type="password" placeholder="******">
 
             <span class="tipo_campo">Confirmação da Senha:<br></span>
-            <input id="confirmacao_senha_input" type="password" placeholder="******">
+            <input id="confirmacao_senha_input" type="password" placeholder="******"><br>
+
+            
+            <label for="selectOpcoes">Qual das modalidades de esportes da prova do IRONMAN você acha mais desafiadora?</label><br>
+
+            <div class="comboBox">
+
+
+                <select name="" id="selectOpcoes" onclick="exibirCategoria()">
+
+                    <option selected disabled>Triathlon</option>
+                    <option value="Natação">Natação</option>
+                    <option value="Corrida">Corrida</option>  
+                    <option value="Ciclismo">Ciclismo</option>
+
+
+                </select>
+                
+            </div>
+
+            <br>
+
+
 
             <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
@@ -154,14 +175,44 @@
         var senhaVar = senha_input.value;
         var cpfVar = cpf_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var comboBoxVar = selectOpcoes.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || cpfVar =="" || comboBoxVar=="" ) {
+           
+            alert(`Preencha todos os campos`);
 
+            return false
 
         }
-        else {
+        else if (nomeVar.length < 3) {
+
+            alert(`O Nome de usuario deve conter no mínimo 3 caracteres  `)
+
+            return false
+            
+        } else if (emailVar.indexOf(`@`) < 3 || emailVar.indexOf(" ")>=0) {
+
+            alert(`Email inválido`)
+            
+            return false
+        }else if (senhaVar.length < 6 ) {
+
+            alert(`Senha muito curta. Deve conter mais que 6 caracteres.`)
+
+            return false
+            
+        }else if (senhaVar !=confirmacaoSenhaVar) {
+            
+            alert(`Senha incompativel , tente novamente.`)
+
+            return false
+            
+        }else if (cpfVar.length > 11 || cpfVar.length <11) {
+
+            alert(`O Cpf deve conter 11 caracteres`)
+            
+            return false
+        }{
 
 
             // Enviando o valor da nova input
@@ -176,7 +227,8 @@
                     nomeServer: nomeVar,
                     emailServer: emailVar,
                     senhaServer: senhaVar,
-                    cpfServer: cpfVar
+                    cpfServer: cpfVar,
+                    comboBoxServer: comboBoxVar
                 })
             }).then(function (resposta) {
 

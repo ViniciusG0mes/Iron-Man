@@ -13,15 +13,15 @@
     <section class="imagemPrincipal">
 
         <header>
-            
+
             <div class="container">
-                
+
                 <div class="titulo">
-                    
+
                     <img src="..//assets/imgs/triathlon.png" alt="">
                     <h1>IRONMAN</h1>
                 </div>
-                
+
                 <div class="navegacao">
                     <ul>
                         <li><a href="index.html">INICIAL</a></li>
@@ -30,18 +30,18 @@
                         <li>|</li>
                         <li><a href="sobreProva.html">SOBRE A PROVA</a></li>
                         <li>|</li>
-                        <li ><a href="login.html">LOGIN</a></li>
+                        <li><a href="login.html">LOGIN</a></li>
                         <li>|</li>
                         <li><a href="cadastro.html">INSCREVA-SE</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
-            
+
         </header>
     </section>
-        
-        <section>
+
+    <section>
 
 
         <div class="containerHistoria">
@@ -83,9 +83,10 @@
                 e 40º graus, principalmente durante a corrida. Além disso, em algumas edições os atletas ainda enfrentam
                 o mar agitado na etapa de natação.
             </p>
-         
-         <br>
-         <h2>Qual a categoria de esporte da prova de triathlon do IronMan você acredita ser mais desafiadora?</h2><br>
+
+            <br>
+            <h2>Selecione a modalidades de esporte da prova do IronMan à sua escolha e veja algumas dicas de nossos
+                treinadores:</h2><br>
 
 
             <div class="comboBox">
@@ -94,62 +95,81 @@
                 <select name="" id="selectOpcoes" onclick="exibirCategoria()">
 
                     <option selected disabled>Triathlon</option>
-                    <option value="0">Natação</option>
-                    <option value="1">Corrida</option>  
-                    <option value="2">Ciclismo</option>
+                    <option value="natacao">Natação</option>
+                    <option value="corrida">Corrida</option>
+                    <option value="ciclismo">Ciclismo</option>
 
 
                 </select>
-                
+
             </div>
 
             <br>
 
-            <div id="exibicaoCardNatacao" class="natacaoCard">
-
-                <div class="conteudoNatacao">
-
-                    <div class="imagemNatacao"> 
-
-                        <img src="assets/imgs/IM703-Egypt-swimming.jpg" alt="" width="300px">
-
-                        <p>lorem</p>
-                    </div>
-
-                </div>
-
-                
-            </div>
-            <div id="exibicaoCardCorrida" class="corridaCard">
 
 
-                <div class="conteudoCorrida">
+            <div class="natacaoCard" id="natacao">
 
-                    <div class="imagemCorrida"> 
+                <div class="imagemNatacao">
 
-                        <img src="assets/imgs/IM703-Egypt-Running.jpg" alt="" width="300px">
+                    <img src="assets/imgs/IM703-Egypt-swimming.jpg" alt="" width="100%">
 
-                        <p>lorem</p>
-                    </div>
-
+                    <p> - Aqueça se puder. Não passe frio, mesmo que seja preciso trotar um pouco.<br>
+                        - Roupa de borracha liberada.<br>
+                        - Colocar a roupa de borracha corretamente;<br>
+                        - Melhores nadadores devem começar mais forte e aliviar logo depois em ritmo de cruzeiro.<br>
+                        - Atletas com ponto fraco na natação devem começar com calma e deixar o corpo começar a sentir a
+                        prova pra depoisachar o espaço e desenvolver um nado mais firme.<br>
+                        - Não se desgastar demais aqui, nadem com técnica, ritmo e paciência.<br>
+                        - É uma boa distância na água e só pensem em nadar, esqueçam das outras etapas. Foco no agora.<br>
+                    </p>
                 </div>
 
             </div>
 
-            <div id="exibicaoCardCiclismo" class="ciclismoCard">
 
-                <div class="conteudoCiclismo">
 
-                    <div class="imagemCorrida"> 
 
-                        <img src="assets/imgs/ironman-kona-atualidade.jpg" alt="" width="300px">
 
-                        <p>lorem</p>
-                    </div>
+
+            <div class="corridaCard" id="corrida">
+
+                <div class="imagemCorrida">
+
+                    <img src="assets/imgs/IMAustralia_PortMacquarie_04-Run.jpg" width="100%">
+
+                    <p> - Corra com técnica, encaixe a postura e depois libere seu ritmo projetado;<br>
+                        - Postos de água a cada 2,2km, HIDRATE-SE;<br>
+                        - Poderá ter uma sensação estranha no início. Fácil demais ou difícil demais.<br>
+                        - CONTAGIE-SE ao passar pela galera!<br>
+                        - Do Km 15 em diante, encaixe a mente em coisas positivas e entenda que vai vencer esse desafio. Seu treino inteiro passará em sua cabeça e o que o levou a estar aqui.<br>
+                        - Nos postos, pode-se caminhar uns passos e colocar com calma os nutrientes para dentro do organismo.<br>
+                        - Nas subidas, vá com calma. Descidas em boa frequência e passos pequenos.</p>
                 </div>
 
-
             </div>
+
+
+
+
+            <div class="ciclismoCard" id="ciclismo">
+
+                <div class="imagemCiclismo">
+
+                    <img src="assets/imgs/70.3New_Zealand_Taupo_03-Bike.jpg" alt="" width="100%">
+
+                    <p> 
+
+                        - Sensação excelente no início. A partir do km 60 começa a sentir o esforço.<br>
+                        - Problemas com a bike? Se furar o pneu, ok. Pare e troquecom calma. <br>
+                        - Você poderá estar se sentindo muito bem no início. Calma, siga o plano, lembre-se de sua mentalização.<br>
+                        - Controle seu pulso, sua potência ou a sensação de esforço LEMBRE-SE de comer e beber, conforme seu plano. É IMPRESCINDÍVEL ou compromete todo restante de prova;<br>
+                        - SEJA CONSTANTE<br></p>
+                </div>
+            </div>
+
+
+
 
 
 
@@ -188,11 +208,11 @@
                     <div class="redesocial1">
                         <span class="redesocial1"></span>
                         <a href="https://www.instagram.com/brasilironman/">
-                            <img src="../imagens/instagram (1).png" alt=""></a>
-                            <a href="https://pt-br.facebook.com/IRONMANtri/">
-                            <img src="../imagens/facebook.png" alt=""></a>
+                            <img src="../assets/imgs/instagram (1).png" alt=""></a>
+                        <a href="https://pt-br.facebook.com/IRONMANtri/">
+                            <img src="../assets/imgs/facebook.png" alt=""></a>
                         <a href="https://www.instagram.com/brasilironman/">
-                            <img src="../imagens/twitter.png" alt=""></a>
+                            <img src="../assets/imgs/twitter.png" alt=""></a>
 
 
                     </div>
@@ -234,32 +254,36 @@
 </html>
 
 <script>
-    
-    var categoriaAnterior=0;
+
+    var categoriaAnterior = 0;
+    listaTriathlon = [];
+    listaabc = [];
+
     function exibirCategoria() {
-        
-        const listaTriathlon=[exibicaoCardNatacao,exibicaoCardCorrida,exibicaoCardCiclismo];
-     
 
-        if (categoriaAnterior >=0) {
+        var listaTriathlon = [natacao, corrida, ciclismo];
+        var listaabc = ["natacao", "corrida", "ciclismo"];
 
-            listaTriathlon[categoriaAnterior].style.display="none";
+
+        if (categoriaAnterior >= 0) {
+
+            listaTriathlon[categoriaAnterior].style.display = "none";
         }
 
-      for (posicao=0; posicao < listaTriathlon.length; posicao++){
+        for (var posicao = 0; posicao < 3; posicao++) {
 
-        if (selectOpcoes.value == posicao) {
-            // none= nada ele desaparece , block= faz aparecer alguma coisa 
-            
-            listaTriathlon[posicao].style.display="block";
-            categoriaAnterior=posicao;
-            
-            
+            if (selectOpcoes.value == listaabc[posicao]) {
+                // none= nada ele desaparece , block= faz aparecer alguma coisa 
+
+                listaTriathlon[posicao].style.display = "block";
+                categoriaAnterior = posicao;
+
+
+            }
+
+
+
         }
-        
-
-
-      }
 
 
 

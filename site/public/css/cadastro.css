@@ -120,6 +120,7 @@ padding: 3rem;
     flex-direction: column;
     border-radius: 10px;
     align-items: center;
+    box-shadow: 10px 10px 10px black;
     
 
     
@@ -155,9 +156,18 @@ padding: 3rem;
 
     }
 
+    .comboBox{
+
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 2px 2px 2px  black;
+    }
+
     .btn{
 
-        margin: 20px;
+        /* margin: 20px; */
         padding: 10px;
         width: 30%;
         background-color: red;
@@ -165,6 +175,8 @@ padding: 3rem;
         border-radius: 5px;
         font-weight: bold;
         font-size: 18px;
+        box-shadow: 3px 3px 3px  black;
+        cursor: pointer;
     }
 
 footer {

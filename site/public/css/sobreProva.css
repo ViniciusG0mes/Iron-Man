@@ -189,30 +189,43 @@ section .percurso {
 
 .natacaoCard {
 
-  border: solid 1px orange;
-  /* display: none; */
-  display: flex;
-  justify-content: center;
+ 
+  display: none;
   text-align: center;
+  
+  
+ 
 
+}
+
+.natacaoCard p{
+
+  text-align: justify;
 }
 
 .corridaCard {
 
-  border: solid 1px pink;
-  /* display: none; */
-  display: flex;
-  justify-content: center;
+  
+  display: none;
   text-align: center;
 }
 
+  .corridaCard p {
+
+    text-align: justify;
+  }
+
 .ciclismoCard {
 
-  border: solid 1px blueviolet;
+  
   display: none;
-  display: flex;
-  justify-content: center;
   text-align: center;
+}
+
+.ciclismoCard p{
+
+  text-align: justify;
+
 }
 
 .containerHistoria a {
